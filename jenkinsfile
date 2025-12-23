@@ -1,0 +1,10 @@
+stage('Back-end') {
+    agent { docker { image 'maven:3.8.1-adoptopenjdk-11' } } 
+    steps {
+        // 1. Compile the file manually
+        sh 'javac src/main/java/com/example/HelloWorld.java'
+        
+        // 2. Run the compiled class
+        sh 'java -cp src/main/java com.example.HelloWorld'
+    }
+}
