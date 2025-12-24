@@ -20,7 +20,7 @@ pipeline {
         stage('Build Node.js') {
             agent {
                 docker { 
-                    image 'node:20-alphine' 
+                    image 'node:20-alpine' 
                 }
             }
             steps {
