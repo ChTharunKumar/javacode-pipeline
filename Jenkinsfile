@@ -27,7 +27,6 @@ pipeline {
                 echo 'Building Node.js Application...'
                 // Usually involves installing dependencies or running a build script
                 sh 'node --version'
-                sh 'npm install' 
                 // Running a simple check for a helloworld.js
                 sh 'node helloworld.js'
             }
